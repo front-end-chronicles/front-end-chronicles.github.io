@@ -1,0 +1,205 @@
+---
+import '../styles/global.css';
+
+const hero = {
+  title: 'Front-End Chronicles',
+  description:
+    "Podcast nantais indépendant créé par deux devs passionnés : Benjamin Auzanneau et Denis Souron. Si vous êtes une société / une association / une personne, n’hésitez pas venir nous parler pour des questions ou si jamais vous avez des idées pour les prochains épisodes.",
+  avatar:
+    'https://storage.googleapis.com/creatorspace-public/users%2Fclh7ixesh00j9jy01dtkh6o41%2FR8vOD30Cov9vaGs1-IMG_5959.webp'
+};
+
+const sections = [
+  {
+    title: 'Qui sommes nous ?',
+    accent: '#55ACEE',
+    items: [
+      {
+        type: 'profile',
+        title: 'Benjamin Auzanneau',
+        subtitle: 'linkedin.com',
+        href: 'https://www.linkedin.com/in/bauzanneau/',
+        accent: '#007EBB',
+        image:
+          'https://storage.googleapis.com/creatorspace-public/users%2Fclh7ixesh00j9jy01dtkh6o41%2FF1gvntGOmuASj0g4-1681801520228.jpg'
+      },
+      {
+        type: 'map',
+        title: 'Nantes, France',
+        href: 'https://www.google.com/maps/@47.210370999999995,-1.553621,13z',
+        accent: '#1EA3FF',
+        embed:
+          'https://www.google.com/maps?q=47.210371,-1.553621&z=13&output=embed'
+      },
+      {
+        type: 'profile',
+        title: 'Denis Souron',
+        subtitle: 'linkedin.com',
+        href: 'https://www.linkedin.com/in/denis-souron/',
+        accent: '#007EBB',
+        image:
+          'https://storage.googleapis.com/creatorspace-public/users%2Fclh7ixesh00j9jy01dtkh6o41%2FOtDPplFQ8M8uT4tJ-1575361128225.jpg'
+      }
+    ]
+  },
+  {
+    title: 'Écouter les épisodes',
+    accent: '#55ACEE',
+    items: [
+      {
+        type: 'link',
+        title: 'Apple Podcasts',
+        subtitle: 'podcasts.apple.com',
+        href: 'https://podcasts.apple.com/fr/podcast/front-end-chronicles/id1553915862',
+        accent: '#F453FF',
+        image:
+          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyMi92NC8xMC8zZC81Yy8xMDNkNWMyMy0yZWQxLWU1MDEtMzU3Ny0zY2E1NWI0MWNhZTkvbXphXzk0MzA4ODAxNzc5NjMxNzg5MDcuanBnLzEyMDB4MTIwMGJmLTYwLmpwZw%3D%3D.jpeg'
+      },
+      {
+        type: 'link',
+        title: 'Spotify',
+        subtitle: 'open.spotify.com',
+        href: 'https://open.spotify.com/show/6bULbbUOCaHwFw4bOKsJTL',
+        accent: '#1ED760',
+        image:
+          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly9pLnNjZG4uY28vaW1hZ2UvYWI2NzY1NjMwMDAwYmE4YWM1NzUxYjA2YTFmYjc5M2UzZTg5Y2RkMw%3D%3D.jpeg'
+      },
+      {
+        type: 'link',
+        title: 'Flux RSS',
+        subtitle: 'anchor.fm',
+        href: 'https://anchor.fm/s/4c31b3c4/podcast/rss',
+        accent: '#FF6B00'
+      },
+      {
+        type: 'link',
+        title: 'Deezer',
+        subtitle: 'deezer.com',
+        href: 'https://www.deezer.com/fr/show/5626887',
+        accent: '#1B1B1B',
+        image:
+          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly9jZG4taW1hZ2VzLmR6Y2RuLm5ldC9pbWFnZXMvdGFsay9mZGY1ZDhkYzcxNDE1Y2MwYmQ3ODdlYTlkZWZjZjlmYi81MDB4NTAwLmpwZw%3D%3D.jpeg'
+      },
+      {
+        type: 'link',
+        title: 'Amazon Music',
+        subtitle: 'music.amazon.fr',
+        href: 'https://music.amazon.fr/podcasts/6455958c-9a7a-4a85-b830-0407eac419c6/front-end-chronicles',
+        accent: '#FF9900'
+      },
+      {
+        type: 'link',
+        title: 'podCloud',
+        subtitle: 'podcloud.fr',
+        href: 'https://podcloud.fr/podcast/front-end-chronicles',
+        accent: '#2E4057',
+        image:
+          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly91cGxvYWRzLnBvZGNsb3VkLmZyL3VwbG9hZHMvY292ZXJzLzRkYjgvNjlkYS8yNGQyL2U1ZDMvMTEwZS8yYjBmLzQ2N2EvZjA0My83NjkwLzc4ZDYvNGRiODY5ZGEyNGQyZTVkMzExMGUyYjBmNDY3YWYwNDM3NjkwNzhkNi5qcGc%2FdmVyc2lvbj0xNjU0MDQ2MDA1Jg%3D%3D.jpeg'
+      },
+      {
+        type: 'link',
+        title: 'YouTube',
+        subtitle: '@FrontEndChronicles',
+        href: 'https://www.youtube.com/@FrontEndChronicles',
+        accent: '#FF0000',
+        image: 'https://i.ytimg.com/vi/4Wc49c9z40k/hqdefault.jpg'
+      },
+      {
+        type: 'link',
+        title: 'YouTube Music',
+        subtitle: 'music.youtube.com',
+        href: 'https://music.youtube.com/playlist?list=PLT3Txpdfddxal5amXpJIS4DGmDLhLlOyC',
+        accent: '#C4302B',
+        image:
+          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly9pLnl0aW1nLmNvbS9wb2RjYXN0c19hcnR3b3JrL1BMVDNUeHBkZmRkeGFsNWFtWHBKSVM0REdtRExoTGxPeUMvcnNzX2ZlZWRfaW5nZXN0ZWQuanBnP3NxcD1DTG10NjhvRy1vYXltd0VLQ0tBRUVLQUVJQUJJV2cmcnM9QU16SkwzbG13R2YzZHpod1dLT3laWVM4Q2xxMV9WQjBiUQ%3D%3D.jpeg'
+      }
+    ]
+  }
+];
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-End Chronicles</title>
+    <meta
+      name="description"
+      content="Podcast nantais indépendant créé par deux devs passionnés : Benjamin Auzanneau et Denis Souron."
+    />
+    <link rel="icon" href={hero.avatar} />
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="layout">
+        <section class="hero">
+          <div class="avatar">
+            <img src={hero.avatar} alt="Front-End Chronicles" loading="lazy" />
+          </div>
+          <h1>{hero.title}</h1>
+          <p>{hero.description}</p>
+        </section>
+
+        {sections.map((section) => (
+          <section class="section-block" style={`--accent:${section.accent || '#55ACEE'}`}>
+            <div class="card section" style={`--accent:${section.accent || '#55ACEE'}`}>
+              <p>{section.title}</p>
+            </div>
+            <div class="cards">
+              {section.items.map((card) =>
+                card.type === 'map' ? (
+                  <a
+                    class="card map"
+                    href={card.href}
+                    style={`--accent:${card.accent || '#1EA3FF'}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="card-inner">
+                      <div class="badge" aria-hidden="true"></div>
+                      <div class="card-meta">
+                        <div class="card-title">{card.title}</div>
+                        <div class="card-subtitle">Voir sur Google Maps</div>
+                      </div>
+                    </div>
+                    <div class="map-frame">
+                      <iframe
+                        src={card.embed}
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Nantes, France"
+                      ></iframe>
+                      <div class="map-label">Nantes</div>
+                    </div>
+                  </a>
+                ) : (
+                  <a
+                    class="card"
+                    href={card.href}
+                    style={`--accent:${card.accent || '#111827'}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="card-inner">
+                      <div class="badge" aria-hidden="true"></div>
+                      <div class="card-meta">
+                        <div class="card-title">{card.title}</div>
+                        {card.subtitle && <div class="card-subtitle">{card.subtitle}</div>}
+                      </div>
+                    </div>
+
+                    {card.image ? (
+                      <div class="thumb" style={`background-image:url('${card.image}')`} role="presentation"></div>
+                    ) : (
+                      <div class="thumb placeholder" aria-hidden="true"></div>
+                    )}
+                  </a>
+                )
+              )}
+            </div>
+          </section>
+        ))}
+      </div>
+    </main>
+  </body>
+</html>

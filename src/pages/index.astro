@@ -1,121 +1,160 @@
 ---
 import '../styles/global.css';
 
-const hero = {
-  title: 'Front-End Chronicles',
-  description:
-    "Podcast nantais indépendant créé par deux devs passionnés : Benjamin Auzanneau et Denis Souron. Si vous êtes une société / une association / une personne, n’hésitez pas venir nous parler pour des questions ou si jamais vous avez des idées pour les prochains épisodes.",
-  avatar:
-    'https://storage.googleapis.com/creatorspace-public/users%2Fclh7ixesh00j9jy01dtkh6o41%2FR8vOD30Cov9vaGs1-IMG_5959.webp'
-};
+const podcastDescription =
+  'Podcast nantais indépendant créé par deux devs passionnés : Benjamin Auzanneau et Denis Souron.';
 
-const sections = [
+const podcastSubDescription =
+  'Si vous êtes une société / une association / une personne, n’hésitez pas à venir nous poser des questions ou si vous avez des idées pour les prochains épisodes.';
+const heroImage = '/images/front-end-chronicles-hero.webp';
+
+const podcastLinks = [
   {
-    title: 'Qui sommes nous ?',
-    accent: '#55ACEE',
-    items: [
+    title: 'Apple Podcasts',
+    logo: '/images/platforms/apple-podcasts.svg',
+    href: 'https://podcasts.apple.com/fr/podcast/front-end-chronicles/id1553915862'
+  },
+  {
+    title: 'Spotify',
+    logo: '/images/platforms/spotify.svg',
+    href: 'https://open.spotify.com/show/6bULbbUOCaHwFw4bOKsJTL'
+  },
+  {
+    title: 'Deezer',
+    logo: '/images/platforms/deezer.png',
+    href: 'https://www.deezer.com/fr/show/5626887'
+  },
+  {
+    title: 'Amazon Music',
+    logo: '/images/platforms/amazon-music.png',
+    href: 'https://music.amazon.fr/podcasts/6455958c-9a7a-4a85-b830-0407eac419c6/front-end-chronicles'
+  },
+  {
+    title: 'podCloud',
+    logo: '/images/platforms/podcloud.png',
+    href: 'https://podcloud.fr/podcast/front-end-chronicles'
+  },
+  {
+    title: 'YouTube',
+    logo: '/images/platforms/youtube.svg',
+    href: 'https://www.youtube.com/@FrontEndChronicles'
+  },
+  {
+    title: 'YouTube Music',
+    logo: '/images/platforms/youtube-music.svg',
+    href: 'https://music.youtube.com/playlist?list=PLT3Txpdfddxal5amXpJIS4DGmDLhLlOyC'
+  },
+  {
+    title: 'Flux RSS',
+    logo: '/images/platforms/rss.svg',
+    href: 'https://anchor.fm/s/4c31b3c4/podcast/rss'
+  }
+];
+
+const hosts = [
+  {
+    name: 'Benjamin Auzanneau',
+    role: 'Co-host',
+    image: '/images/hosts/benjamin-auzanneau.jpg',
+    links: [
       {
-        type: 'profile',
-        title: 'Benjamin Auzanneau',
-        subtitle: 'linkedin.com',
-        href: 'https://www.linkedin.com/in/bauzanneau/',
-        accent: '#007EBB',
-        image:
-          'https://storage.googleapis.com/creatorspace-public/users%2Fclh7ixesh00j9jy01dtkh6o41%2FF1gvntGOmuASj0g4-1681801520228.jpg'
-      },
-      {
-        type: 'map',
-        title: 'Nantes, France',
-        href: 'https://www.google.com/maps/@47.210370999999995,-1.553621,13z',
-        accent: '#1EA3FF',
-        embed:
-          'https://www.google.com/maps?q=47.210371,-1.553621&z=13&output=embed'
-      },
-      {
-        type: 'profile',
-        title: 'Denis Souron',
-        subtitle: 'linkedin.com',
-        href: 'https://www.linkedin.com/in/denis-souron/',
-        accent: '#007EBB',
-        image:
-          'https://storage.googleapis.com/creatorspace-public/users%2Fclh7ixesh00j9jy01dtkh6o41%2FOtDPplFQ8M8uT4tJ-1575361128225.jpg'
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/bauzanneau/'
       }
     ]
   },
   {
-    title: 'Écouter les épisodes',
-    accent: '#55ACEE',
-    items: [
+    name: 'Denis Souron',
+    role: 'Co-host',
+    image: '/images/hosts/denis-souron.jpg',
+    links: [
       {
-        type: 'link',
-        title: 'Apple Podcasts',
-        subtitle: 'podcasts.apple.com',
-        href: 'https://podcasts.apple.com/fr/podcast/front-end-chronicles/id1553915862',
-        accent: '#F453FF',
-        image:
-          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyMi92NC8xMC8zZC81Yy8xMDNkNWMyMy0yZWQxLWU1MDEtMzU3Ny0zY2E1NWI0MWNhZTkvbXphXzk0MzA4ODAxNzc5NjMxNzg5MDcuanBnLzEyMDB4MTIwMGJmLTYwLmpwZw%3D%3D.jpeg'
-      },
-      {
-        type: 'link',
-        title: 'Spotify',
-        subtitle: 'open.spotify.com',
-        href: 'https://open.spotify.com/show/6bULbbUOCaHwFw4bOKsJTL',
-        accent: '#1ED760',
-        image:
-          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly9pLnNjZG4uY28vaW1hZ2UvYWI2NzY1NjMwMDAwYmE4YWM1NzUxYjA2YTFmYjc5M2UzZTg5Y2RkMw%3D%3D.jpeg'
-      },
-      {
-        type: 'link',
-        title: 'Flux RSS',
-        subtitle: 'anchor.fm',
-        href: 'https://anchor.fm/s/4c31b3c4/podcast/rss',
-        accent: '#FF6B00'
-      },
-      {
-        type: 'link',
-        title: 'Deezer',
-        subtitle: 'deezer.com',
-        href: 'https://www.deezer.com/fr/show/5626887',
-        accent: '#1B1B1B',
-        image:
-          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly9jZG4taW1hZ2VzLmR6Y2RuLm5ldC9pbWFnZXMvdGFsay9mZGY1ZDhkYzcxNDE1Y2MwYmQ3ODdlYTlkZWZjZjlmYi81MDB4NTAwLmpwZw%3D%3D.jpeg'
-      },
-      {
-        type: 'link',
-        title: 'Amazon Music',
-        subtitle: 'music.amazon.fr',
-        href: 'https://music.amazon.fr/podcasts/6455958c-9a7a-4a85-b830-0407eac419c6/front-end-chronicles',
-        accent: '#FF9900'
-      },
-      {
-        type: 'link',
-        title: 'podCloud',
-        subtitle: 'podcloud.fr',
-        href: 'https://podcloud.fr/podcast/front-end-chronicles',
-        accent: '#2E4057',
-        image:
-          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly91cGxvYWRzLnBvZGNsb3VkLmZyL3VwbG9hZHMvY292ZXJzLzRkYjgvNjlkYS8yNGQyL2U1ZDMvMTEwZS8yYjBmLzQ2N2EvZjA0My83NjkwLzc4ZDYvNGRiODY5ZGEyNGQyZTVkMzExMGUyYjBmNDY3YWYwNDM3NjkwNzhkNi5qcGc%2FdmVyc2lvbj0xNjU0MDQ2MDA1Jg%3D%3D.jpeg'
-      },
-      {
-        type: 'link',
-        title: 'YouTube',
-        subtitle: '@FrontEndChronicles',
-        href: 'https://www.youtube.com/@FrontEndChronicles',
-        accent: '#FF0000',
-        image: 'https://i.ytimg.com/vi/4Wc49c9z40k/hqdefault.jpg'
-      },
-      {
-        type: 'link',
-        title: 'YouTube Music',
-        subtitle: 'music.youtube.com',
-        href: 'https://music.youtube.com/playlist?list=PLT3Txpdfddxal5amXpJIS4DGmDLhLlOyC',
-        accent: '#C4302B',
-        image:
-          'https://storage.googleapis.com/creatorspace-public/sites%2Fogimages%2FaHR0cHM6Ly9pLnl0aW1nLmNvbS9wb2RjYXN0c19hcnR3b3JrL1BMVDNUeHBkZmRkeGFsNWFtWHBKSVM0REdtRExoTGxPeUMvcnNzX2ZlZWRfaW5nZXN0ZWQuanBnP3NxcD1DTG10NjhvRy1vYXltd0VLQ0tBRUVLQUVJQUJJV2cmcnM9QU16SkwzbG13R2YzZHpod1dLT3laWVM4Q2xxMV9WQjBiUQ%3D%3D.jpeg'
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/denis-souron/'
       }
     ]
   }
 ];
+
+const appleShowUrl = 'https://podcasts.apple.com/fr/podcast/front-end-chronicles/id1553915862';
+const appleEmbedUrl =
+  'https://embed.podcasts.apple.com/fr/podcast/front-end-chronicles/id1553915862?itscg=30200&itsct=podcast_box_player';
+const rssUrl = 'https://anchor.fm/s/4c31b3c4/podcast/rss';
+
+type Episode = {
+  title: string;
+  link: string;
+  publishedAt: string;
+  summary: string;
+};
+
+function pickTag(content: string, tag: string): string {
+  const regex = new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'i');
+  const match = content.match(regex);
+  if (!match) return '';
+
+  return match[1]
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/gi, '$1')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .trim();
+}
+
+function formatDate(value: string): string {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return '';
+
+  return new Intl.DateTimeFormat('fr-FR', {
+    dateStyle: 'long'
+  }).format(parsed);
+}
+
+function truncateText(value: string, maxLength: number): string {
+  if (value.length <= maxLength) return value;
+  return `${value.slice(0, maxLength).trimEnd()}...`;
+}
+
+async function getLatestEpisode(feedUrl: string): Promise<Episode | null> {
+  try {
+    const response = await fetch(feedUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Astro build)'
+      }
+    });
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const xml = await response.text();
+    const itemMatch = xml.match(/<item>([\s\S]*?)<\/item>/i);
+
+    if (!itemMatch) {
+      return null;
+    }
+
+    const item = itemMatch[1];
+    const title = pickTag(item, 'title');
+    const link = pickTag(item, 'link') || appleShowUrl;
+    const publishedAt = formatDate(pickTag(item, 'pubDate'));
+    const summary = truncateText(pickTag(item, 'description'), 260);
+
+    return {
+      title: title || 'Dernier épisode disponible',
+      link,
+      publishedAt,
+      summary
+    };
+  } catch {
+    return null;
+  }
+}
+
+const latestEpisode = await getLatestEpisode(rssUrl);
 ---
 
 <html lang="fr">
@@ -123,83 +162,275 @@ const sections = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Front-End Chronicles</title>
-    <meta
-      name="description"
-      content="Podcast nantais indépendant créé par deux devs passionnés : Benjamin Auzanneau et Denis Souron."
-    />
-    <link rel="icon" href={hero.avatar} />
+    <meta name="description" content={podcastDescription} />
   </head>
   <body>
-    <main class="page-shell">
-      <div class="layout">
-        <section class="hero">
-          <div class="avatar">
-            <img src={hero.avatar} alt="Front-End Chronicles" loading="lazy" />
+    <main class="site">
+      <header class="hero panel" id="presentation">
+        <div class="hero-copy">
+          <p class="eyebrow">Podcast Front-End Francophone</p>
+          <h1>Front-End Chronicles</h1>
+          <p class="lead">{podcastDescription}</p>
+          <p class="lead lead-subtle">{podcastSubDescription}</p>
+          <div class="hero-actions">
+              <a class="btn primary" href={appleShowUrl} target="_blank" rel="noopener noreferrer">
+              Écouter sur Apple Podcasts
+            </a>
+            <a
+              class="btn secondary"
+              href="https://open.spotify.com/show/6bULbbUOCaHwFw4bOKsJTL"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ouvrir Spotify
+            </a>
           </div>
-          <h1>{hero.title}</h1>
-          <p>{hero.description}</p>
-        </section>
+        </div>
+        <div class="hero-media">
+          <img
+            class="hero-media-base"
+            src={heroImage}
+            alt="Front-End Chronicles podcast cover"
+            loading="lazy"
+          />
+          <img
+            class="hero-media-layer hero-media-layer-red"
+            src={heroImage}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <img
+            class="hero-media-layer hero-media-layer-blue"
+            src={heroImage}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+          <div class="hero-hover-message" aria-hidden="true">
+            Oui ? L’effet est incroyable, n’est-ce pas ?
+          </div>
+        </div>
+      </header>
 
-        {sections.map((section) => (
-          <section class="section-block" style={`--accent:${section.accent || '#55ACEE'}`}>
-            <div class="card section" style={`--accent:${section.accent || '#55ACEE'}`}>
-              <p>{section.title}</p>
-            </div>
-            <div class="cards">
-              {section.items.map((card) =>
-                card.type === 'map' ? (
-                  <a
-                    class="card map"
-                    href={card.href}
-                    style={`--accent:${card.accent || '#1EA3FF'}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div class="card-inner">
-                      <div class="badge" aria-hidden="true"></div>
-                      <div class="card-meta">
-                        <div class="card-title">{card.title}</div>
-                        <div class="card-subtitle">Voir sur Google Maps</div>
-                      </div>
-                    </div>
-                    <div class="map-frame">
-                      <iframe
-                        src={card.embed}
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Nantes, France"
-                      ></iframe>
-                      <div class="map-label">Nantes</div>
-                    </div>
-                  </a>
-                ) : (
-                  <a
-                    class="card"
-                    href={card.href}
-                    style={`--accent:${card.accent || '#111827'}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div class="card-inner">
-                      <div class="badge" aria-hidden="true"></div>
-                      <div class="card-meta">
-                        <div class="card-title">{card.title}</div>
-                        {card.subtitle && <div class="card-subtitle">{card.subtitle}</div>}
-                      </div>
-                    </div>
+      <section class="panel" id="ecoute-apple">
+        <div class="section-head">
+          <p class="eyebrow">Lecture intégrée</p>
+        </div>
 
-                    {card.image ? (
-                      <div class="thumb" style={`background-image:url('${card.image}')`} role="presentation"></div>
-                    ) : (
-                      <div class="thumb placeholder" aria-hidden="true"></div>
-                    )}
-                  </a>
-                )
-              )}
-            </div>
-          </section>
-        ))}
-      </div>
+        <div class="player-layout">
+          <div class="apple-frame">
+            <iframe
+              title="Apple Podcasts - Front-End Chronicles"
+              src={appleEmbedUrl}
+              loading="lazy"
+              frameborder="0"
+              allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+            ></iframe>
+          </div>
+
+          <article class="latest-episode">
+            <p class="mini-title">Dernier épisode via RSS</p>
+            {latestEpisode ? (
+              <>
+                <h3>{latestEpisode.title}</h3>
+                {latestEpisode.publishedAt && <p class="episode-date">{latestEpisode.publishedAt}</p>}
+                {latestEpisode.summary && <p class="episode-summary">{latestEpisode.summary}</p>}
+                <a
+                  class="btn primary"
+                  href={latestEpisode.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Écouter le dernier épisode
+                </a>
+              </>
+            ) : (
+              <>
+                <h3>Le dernier épisode n’a pas pu être chargé pendant le build.</h3>
+                <p class="episode-summary">
+                  Le player Apple ci-contre reste disponible et propose les derniers épisodes en direct.
+                </p>
+                <a class="btn secondary" href={appleShowUrl} target="_blank" rel="noopener noreferrer">
+                  Ouvrir la page Apple Podcasts
+                </a>
+              </>
+            )}
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="liens-podcast">
+        <div class="section-head">
+          <p class="eyebrow">Liens</p>
+        </div>
+        <div class="platform-grid">
+          {podcastLinks.map((link) => (
+            <a class="platform-card" href={link.href} target="_blank" rel="noopener noreferrer">
+              <div class="platform-logo-wrap">
+                <img class="platform-logo" src={link.logo} alt={`Logo ${link.title}`} loading="lazy" />
+              </div>
+              <span>{link.title}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="panel" id="equipe">
+        <div class="section-head">
+          <p class="eyebrow">Équipe de Front-End Chronicles</p>
+        </div>
+        <div class="host-grid">
+          {hosts.map((host) => (
+            <article class="host-card">
+              <img src={host.image} alt={host.name} loading="lazy" />
+              <div class="host-content">
+                <h3>{host.name}</h3>
+                <p>{host.role}</p>
+                <div class="host-links">
+                  {host.links.map((link) => (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </main>
+    <script is:inline>
+      (() => {
+        const HOVER_DELAY_MS = 1500;
+        const MARGIN_PX = 12;
+        const OFFSET_X_PX = 18;
+        const OFFSET_Y_PX = 20;
+        const OFFSCREEN = '-9999px';
+
+        const media = document.querySelector('.hero-media');
+        if (!(media instanceof HTMLElement)) return;
+
+        const message = media.querySelector('.hero-hover-message');
+        if (!(message instanceof HTMLElement)) return;
+
+        const state = {
+          hovering: false,
+          visible: false,
+          pointerX: 0,
+          pointerY: 0,
+          timerId: 0,
+          rafId: 0
+        };
+
+        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+        const clearRevealTimer = () => {
+          if (state.timerId) {
+            window.clearTimeout(state.timerId);
+            state.timerId = 0;
+          }
+        };
+
+        const clearRaf = () => {
+          if (state.rafId) {
+            window.cancelAnimationFrame(state.rafId);
+            state.rafId = 0;
+          }
+        };
+
+        const hideMessage = () => {
+          state.visible = false;
+          message.classList.remove('is-visible');
+          message.style.left = OFFSCREEN;
+          message.style.top = OFFSCREEN;
+        };
+
+        const updatePosition = () => {
+          state.rafId = 0;
+          if (!state.visible) return;
+
+          const rect = media.getBoundingClientRect();
+          const rawX = state.pointerX - rect.left + OFFSET_X_PX;
+          const rawY = state.pointerY - rect.top + OFFSET_Y_PX;
+          const maxX = Math.max(MARGIN_PX, rect.width - message.offsetWidth - MARGIN_PX);
+          const maxY = Math.max(MARGIN_PX, rect.height - message.offsetHeight - MARGIN_PX);
+
+          const x = clamp(rawX, MARGIN_PX, maxX);
+          const y = clamp(rawY, MARGIN_PX, maxY);
+
+          message.style.left = `${x}px`;
+          message.style.top = `${y}px`;
+        };
+
+        const requestPositionUpdate = () => {
+          if (state.rafId) return;
+          state.rafId = window.requestAnimationFrame(updatePosition);
+        };
+
+        const setPointer = (event) => {
+          state.pointerX = event.clientX;
+          state.pointerY = event.clientY;
+        };
+
+        const revealMessage = () => {
+          if (!state.hovering) return;
+          state.visible = true;
+          message.classList.add('is-visible');
+          requestPositionUpdate();
+        };
+
+        const onEnter = (event) => {
+          state.hovering = true;
+          setPointer(event);
+          clearRevealTimer();
+          hideMessage();
+          state.timerId = window.setTimeout(revealMessage, HOVER_DELAY_MS);
+        };
+
+        const onMove = (event) => {
+          if (!state.hovering) return;
+          setPointer(event);
+          if (state.visible) requestPositionUpdate();
+        };
+
+        const onLeave = () => {
+          state.hovering = false;
+          clearRevealTimer();
+          clearRaf();
+          hideMessage();
+        };
+
+        const controller = new AbortController();
+        const listenerOptions = { signal: controller.signal };
+
+        media.addEventListener('pointerenter', onEnter, listenerOptions);
+        media.addEventListener('pointermove', onMove, listenerOptions);
+        media.addEventListener('pointerleave', onLeave, listenerOptions);
+        media.addEventListener('pointercancel', onLeave, listenerOptions);
+        window.addEventListener(
+          'resize',
+          () => {
+            if (state.visible) requestPositionUpdate();
+          },
+          listenerOptions
+        );
+        document.addEventListener(
+          'visibilitychange',
+          () => {
+            if (document.hidden) onLeave();
+          },
+          listenerOptions
+        );
+        window.addEventListener(
+          'pagehide',
+          () => {
+            controller.abort();
+            clearRevealTimer();
+            clearRaf();
+          },
+          { once: true }
+        );
+      })();
+    </script>
   </body>
 </html>
